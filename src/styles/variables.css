@@ -1,0 +1,22 @@
+:root{
+    --active-font-color: #2c98f0;
+    --text-color:  #999999;
+    --main-bg-c: #e0edf5;
+    --menu-background: rgb(242, 243, 247);
+    --shadow:#b9cad5;
+    --cornflowerblue:#90f0fe;
+    --blue: blue;
+    --red: red;
+    --green: green;
+    --yellow: rgb(251 241 79);;
+    --darkgreen: #4bda6b;
+    --darkblue:darkblue;
+    --darkred: #6d15dd;
+    --thumb-color: black;
+    --violet:violet;
+    --lilac: #a920eb;
+    --pink: rgb(236, 37, 236);
+    --slider: hsla(260,11%,95%,1);
+    --bgc:  #f2f3f7;;
+
+}
