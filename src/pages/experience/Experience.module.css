@@ -35,7 +35,11 @@ h5{
     box-shadow: 0px 0px 20px var(--shadow);
 }
 
+.experience li{
+    list-style-type: square;
+}
+
 li{
-    line-height: 1.5 rem
+    line-height: 1.5 rem;
 }
 

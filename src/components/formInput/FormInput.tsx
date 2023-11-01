@@ -2,7 +2,7 @@ import React, { ChangeEvent } from "react";
 import styles from "./FormInput.module.css";
 
 interface IFormInputProps {
-  label: string;
+  label?: string;
   value?: string;
   type?: string;
   name?: string;
@@ -11,7 +11,8 @@ interface IFormInputProps {
   onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
   backgroundColor?: string;
   style?: {};
-  }
+  placeholder?: string;
+}
 const FormInput = ({
   label,
   value,
@@ -21,11 +22,15 @@ const FormInput = ({
   type,
   className,
   style,
+  placeholder,
   ...props
 }: IFormInputProps) => {
-  
   return (
-    <div className={className? `${styles.group} ${styles.className}`: styles.group}>
+    <div
+      className={
+        className ? `${styles.group} ${styles.className}` : styles.group
+      }
+    >
       <input
         className={styles.formInput}
         onChange={onChange}
@@ -33,17 +38,11 @@ const FormInput = ({
         name={name}
         type={type}
         style={style}
+        placeholder={placeholder}
+        required={required}
         {...props}
       />
-      {label && (
-        <label
-          className={` ${
-            styles.formInputLabel
-          }`}
-        >
-          {label}
-        </label>
-      )}
+      {label && <label className={` ${styles.formInputLabel}`}>{label}</label>}
     </div>
   );
 };

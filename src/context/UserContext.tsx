@@ -18,7 +18,7 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
   const [currentUser, setCurrentUser] = useState(null);
 
   const value: any = { currentUser, setCurrentUser };
-  console.log(currentUser, " user");
+  
   useEffect(() => {
     const unSubscribe = onAuthStateChangedListener((user: any) => {
       if (user) {

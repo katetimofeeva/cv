@@ -1,4 +1,3 @@
-import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
@@ -7,7 +6,6 @@ import Skills from "./pages/skills/Skills";
 import Experience from "./pages/experience/Experience";
 import SignInForm from "./components/signInForm/SignInForm";
 import SignUpForm from "./components/signUpForm/SignUpForm";
-import Step1 from "./components/form/Step1";
 
 import LayOut from "./layOut/LayOut";
 
@@ -26,7 +24,7 @@ function App() {
           <Route path="skills" element={<Skills />} />
           <Route path="experience" element={<Experience />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="resume" element={<ResumeBuilder />}/>
+          <Route path="resume" element={<ResumeBuilder />} />
           <Route path="signIn" element={<SignInForm />} />
           <Route path="signUp" element={<SignUpForm />} />
         </Route>

@@ -10,12 +10,11 @@ const Skills = () => {
     resume: { skills },
   } = useContext(ResumeContext);
 
-  console.log(skills.skillsInfo, "skills");
   return (
     <div className={styles.wrapper}>
       <div>
-        <span>ABOUT</span>
-        <h2>WHO AM I?</h2>
+        <span>SKILLS</span>
+        <h2>WHICH SKILLS DO I HAVE?</h2>
       </div>
       <div>
         {skills.skillsInfo.map((el: string, i: number) => {

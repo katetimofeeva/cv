@@ -1,7 +1,7 @@
 import {ReactNode} from 'react'
 
 export interface IResume {
-    about: IAbout |[];
+    about: string[]|string;
     contacts: {
         text: string; type: string; href: string; 
     }[]|[];
@@ -10,7 +10,6 @@ export interface IResume {
     skills: ISkillsInfo;
 }
 
-export type IAbout=string[]
 export interface IResumeInfo {
     title: string;
     companyName: string;
@@ -20,8 +19,8 @@ export interface IResumeInfo {
 }
   
 export interface ISkillsInfo {
-    skillsName: ISkill[]| [];
-    skillsInfo: string[]| [];
+    skillsName: ISkill[];
+    skillsInfo: string[];
 }
   
 export interface ISkill {
@@ -44,7 +43,7 @@ export interface ProviderProps {
 }
 
 export interface IFormData {
-    about: string[];
+    about: string;
     education: IEducationForm[];
 }
   
@@ -53,4 +52,82 @@ export interface IEducationForm {
     diploma: string;
     startDay: string;
     endDay: string;
+}
+
+export interface IValue {
+  currentStep: number;
+  setCurrentStep: (step: number) => void;
+  resume: {
+    about: string;
+    name: string;
+    education: IUserEducation[];
+    experience: {
+      title: string;
+      companyName: string;
+      location: string;
+      description: string;
+      startDay: string;
+      endDay: string;
+      id: string;
+    }[];
+    skills: ISkillsInfo;
+    contacts: {phone: string, linkedin: string}
+  };
+  setResume: React.Dispatch<
+    React.SetStateAction<{
+      about: string;
+      education: {
+        university: string;
+        diploma: string;
+        startDay: string;
+        endDay: string;
+        id: string;
+      }[];
+      experience: {
+        title: string;
+        companyName: string;
+        location: string;
+        description: string;
+        startDay: string;
+        endDay: string;
+        id: string;
+      }[];
+      skills: ISkillsInfo;
+      contacts:{
+        phone: string,
+        linkedin: string
+      }
+    }>
+  >;
+}
+
+export interface IUserResume {
+    about: string;
+    name: string;
+    education: IUserEducation[]
+    experience: {
+        title: string;
+        companyName: string;
+        location: string;
+        description: string;
+        startDay: string;
+        endDay: string;
+        id: string;
+        }[]
+    skills: {
+      skillsName: [] | ISkill[];
+      skillsInfo: [] | string[]
+    }
+    contacts:{
+      phone: string,
+      linkedin: string
+    }
+}
+
+export interface IUserEducation{
+  university: string;
+  diploma: string;
+  startDay: string;
+  endDay: string;
+  id: string;
 }

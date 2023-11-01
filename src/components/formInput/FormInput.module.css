@@ -1,6 +1,5 @@
 :root {
     --bgc: var(--bgc); /* Define the background color variable with a default value */
-    --top: var(--top)
   }
 
 .group {
@@ -25,12 +24,6 @@
 .formInput:focus {
     outline: none;
 }
-
- /* .formInput:focus ~ .formInputLabel {
-    top: 0px;
-    font-size: 12px;
-    color: black;  
-} * */
 
 input[type='password'] {
     letter-spacing: 0.3em;

@@ -1,0 +1,65 @@
+.list{
+    position: relative;
+    border: 2px solid #ccc;  
+    box-shadow: 0px 0px 5px var(--shadow);
+    border-radius: 10px;
+    margin-bottom: 5%;
+  }
+
+.removeBin{
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.textAreaWrapper{
+  position: relative;
+  padding: 10px 0;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  position: relative;
+}
+
+.textArea {
+  background: none;
+  background: #f2f3f7;
+  color: black;
+  font-size: 18px;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid black;
+  margin: 25px 0;
+  resize: none;  
+  height: 25%;
+  font-family: Arial, sans-serif;
+}
+
+  .textArea:focus {
+  outline: none;
+}
+
+.textAreaLabel {
+  color: black;  
+  font-size: 16px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  font-size: 16px;
+  color: black;
+    &:first-letter {
+        text-transform:uppercase
+      }
+}
+
+.icon{    position: absolute;
+  top: 40px;
+  right: 16px;
+  z-index: 4;
+  font-size: 24px
+}

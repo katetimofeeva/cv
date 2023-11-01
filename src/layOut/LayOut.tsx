@@ -8,27 +8,12 @@ import useResponsive from "../hook/useMediaQuery";
 import styles from "./LayOut.module.css";
 
 const LayOut = () => {
-  const [isMobile ] = useResponsive();
+  const [isMobile] = useResponsive();
   const [isMenuVisible, setIsMenuVisible] = useState(false);
-  
+
   const toggleMenu = () => {
     setIsMenuVisible(!isMenuVisible);
   };
-  //  const [windowHeight, setWindowHeight] = React.useState(window.innerHeight);
-  // console.log(windowHeight,' 777')
-  //   // Обработчик изменения высоты окна
-  //   const handleWindowResize = () => {
-  //     setWindowHeight(window.innerHeight);
-  //   };
-
-  //   // Подписка на события изменения размера окна при монтировании компонента
-  //   React.useEffect(() => {
-  //     window.addEventListener("resize", handleWindowResize);
-  //     return () => {
-  //       // Отписка от событий при размонтировании компонента
-  //       window.removeEventListener("resize", handleWindowResize);
-  //     };
-  //   }, []);
 
   return (
     <div className={styles.wrapper}>
@@ -39,7 +24,9 @@ const LayOut = () => {
         <div>
           <RxHamburgerMenu
             onClick={toggleMenu}
-            className={isMenuVisible? styles.hamburgerIconDark: styles.hamburgerIcon}
+            className={
+              isMenuVisible ? styles.hamburgerIconDark : styles.hamburgerIcon
+            }
           />
           {isMenuVisible && (
             <Menu

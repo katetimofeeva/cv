@@ -28,7 +28,6 @@ export const ResumeProvider = ({ children }: ProviderProps) => {
   useEffect(() => {
     const getCategoriesResumeMap = async () => {
       const resumeMap = await getCategoriesAndDoc("resume");
-      console.log(resumeMap, " resumeMap");
 
       const updatedResume: IResume = {
         ...resume,
@@ -40,7 +39,7 @@ export const ResumeProvider = ({ children }: ProviderProps) => {
         experience: Array.isArray(resumeMap.experience)
           ? resumeMap.experience
           : [],
-        skills: resumeMap.skills 
+        skills: resumeMap.skills,
       };
 
       setResume(updatedResume);

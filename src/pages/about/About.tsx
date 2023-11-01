@@ -14,9 +14,10 @@ const About = () => {
         <h2>WHO AM I?</h2>
       </div>
       <div>
-        {about.map((el: string, i: number) => {
-          return <p key={i}>{el}</p>;
-        })}
+        {Array.isArray(about) &&
+          about.map((el: string, i: number) => {
+            return <p key={i}>{el}</p>;
+          })}
       </div>
     </div>
   );

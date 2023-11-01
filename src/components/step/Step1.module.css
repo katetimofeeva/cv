@@ -1,0 +1,196 @@
+
+.wrapper{
+  margin: 5% auto 0;
+    & h2{     text-align: center;
+      margin-bottom: 45px;
+    };
+    
+}
+.container{
+  background: #f2f3f7;
+  box-shadow: 0px 0px 20px var(--shadow);
+  padding-left: 2%;
+  margin: 25px 0;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.textAreaWrapper{
+    position: relative;
+    padding: 10px 0;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    position: relative;
+}
+
+.textArea {
+    background: none;
+    background: #f2f3f7;
+    color: black;
+    font-size: 18px;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid black;
+    margin: 25px 0;
+    resize: none;  
+    height: 25%;
+    font-family: Arial, sans-serif;
+  }
+  
+    .textArea:focus {
+    outline: none;
+  }
+  
+.textAreaLabel {
+    color: black;  
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    font-size: 16px;
+    color: black;
+      &:first-letter {
+          text-transform:uppercase
+        }
+}
+
+.df{
+  display: flex;
+  justify-content: flex-start
+}
+
+.list{
+  position: relative;
+  border: 2px solid #ccc;  
+  box-shadow: 0px 0px 5px var(--shadow);
+  border-radius: 10px;
+  margin-bottom: 5%;
+}
+.removeBin{
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+/*style for input*/
+.group {
+  position: relative;
+  margin: 25px 0;
+
+}
+
+.formInput {
+  background: none;
+  background-color: var(--bgc);
+  color: black;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid black;
+  margin: 25px 0;
+}
+
+.formInput:focus {
+  outline: none;
+}
+
+input[list]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+input[list]::-webkit-input-placeholder {
+  color: #999;  
+  font-style: italic;
+}
+
+input[list]::-webkit-datalist-value {
+  background-color: #eee; 
+  font-weight: bold;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.icon{    position: absolute;
+  top: 40px;
+  right: 16px;
+  z-index: 4;
+  font-size: 24px
+}
+
+.customSelect {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-color: var(--bgc);
+  & option{
+    background-color: white;
+    color: black;
+    width: 20%
+  }
+}
+
+li {
+  list-style-type: none;
+}
+
+h3{
+  text-align: center;
+  margin: 15px 0;
+}
+
+h2{
+  text-transform: uppercase;
+}
+
+.dfSb{
+  display: flex;
+  justify-content: space-between;
+}
+
+.pt-b{
+  padding: 20px 0;
+}
+
+.mt-b{
+  margin: 10px 0;
+}
+
+.containerGrid{
+  display: grid;
+  grid-template-columns: auto 20px;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition : box-shadow 0.2s
+}
+.containerGrid:hover{
+  /* transform: scale(1.05); */
+  box-shadow: 0 0 15px rgba(0,0,0,0.15); 
+}
+.containerGrid > li, .containerGrid > div {
+  display: grid; 
+  /* grid-template-columns: 1fr 20px;   */
+  gap: 10px;
+}
+
+.containerGrid > li > span, .containerGrid > div> span  {
+  grid-column: span 2;  
+}
+
+
+

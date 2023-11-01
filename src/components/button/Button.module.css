@@ -5,7 +5,7 @@
     letter-spacing: 0.5px;
     line-height: 50px;
     padding: 0 15px 0 15px;
-    font-size: 15px;
+    font-size: 12px;
     background: transparent; 
     color: black;
     text-transform: uppercase;
@@ -15,7 +15,7 @@
     justify-content: center;
     letter-spacing: 5px;
     transition: background-color 0.3s,  border-color 0.3s; 
-  
+    border-radius:10px;
 
     &:hover {
         background-color: white;

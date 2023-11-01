@@ -1,11 +1,13 @@
-import { useContext, useEffect } from "react";
+import { useContext  } from "react";
 import { useNavigate } from "react-router-dom";
 
 import Button from "../../components/button/Button";
 import { UserContext } from "../../context/UserContext";
 import { signOutUser } from "../../utils/firebase/Firebase";
-import Step1 from "../../components/form/Step1";
-import Step2 from "../../components/form/Step2";
+import Step1 from "../../components/step/Step1";
+import Step2 from "../../components/step/Step2";
+import Step3 from "../../components/step/Step3";
+import PDFResume from "../../components/PDFResume/PDFResume";
 
 import styles from "./ResumeBuilder.module.css";
 import { UserResumeContext } from "../../context/UserResumeContext";
@@ -13,20 +15,11 @@ import { UserResumeContext } from "../../context/UserResumeContext";
 const ResumeBuilder = () => {
   const navigate = useNavigate();
   const { currentUser } = useContext(UserContext);
-  const {currentStep, setCurrentStep} = useContext(UserResumeContext)
-  console.log(currentUser, "currentUser");
-
-  // useEffect(() => {
-  //   if (currentUser && step === 0) {
-  //     navigate("/resume/stepFirst");
-  //   }
-  // }, [currentUser, step, navigate]);
+  const { currentStep, resume } = useContext(UserResumeContext);
 
   const handleLodOut = () => {
     signOutUser();
   };
-
-  console.log(currentStep, 'step')
 
   return (
     <div className={styles.container}>
@@ -37,9 +30,11 @@ const ResumeBuilder = () => {
             <p>Create yo own resume</p>
             <Button onClick={handleLodOut}>Log out</Button>
           </div>
-          <div>
-            {currentStep===0 && <Step1/>}
-            {currentStep===1 && <Step2/>}
+          <div className={styles.form}>
+            {currentStep === 0 && <Step1 />}
+            {currentStep === 1 && <Step2 />}
+            {currentStep === 2 && <Step3 />}
+            {currentStep === 3 && <PDFResume resume={resume} />}
           </div>
         </>
       ) : (

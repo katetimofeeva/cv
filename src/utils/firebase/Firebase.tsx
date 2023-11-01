@@ -83,7 +83,6 @@ export const signInAuthUserWithEmailAndPassword = async (
 ) => {
   if (!email || !password) return;
   const user = await signInWithEmailAndPassword(auth, email, password);
-  console.log(user, "user");
   return user;
 };
 
@@ -105,7 +104,6 @@ export const addCollectionAndDocuments = async (
   });
 
   await batch.commit();
-  console.log("done");
 };
 
 
@@ -126,6 +124,5 @@ const infoMap: IResume= querySnapshot.docs
   acc[title.toLowerCase()]  = info;
   return acc;
 },{})
-console.log(infoMap, "infoMap")
 return infoMap
 }

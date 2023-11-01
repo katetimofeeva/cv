@@ -33,7 +33,6 @@ const SignUpForm = () => {
     navigate('/signIn', { replace: true })
   }
   const cleanFormFields = () => {
-    console.log('clean')
     setFormValue(defaultFormValue);
   };
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
